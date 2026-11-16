@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIXEL ART STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#">PIXEL<span>ART</span></a>
+  <div class="top-label">IJODIY PIXEL STUDIYASI</div>
+  <div class="live-status"><i></i> ISHGA TAYYOR</div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="eyebrow">18-LOYIHA · IJODIY DASTUR</div>
+    <h1>PIXEL ART <span>STUDIO</span></h1>
+    <p>Har bir katak — yangi imkoniyat. Tasavvuringizni piksel san'atiga aylantiring!</p>
+  </section>
+
+  <section class="workspace">
+
+    <aside class="sidebar">
+      <div class="panel">
+        <div class="panel-title">01 / CHIZISH VOSITALARI</div>
+
+        <div class="tools">
+          <button class="tool active" data-tool="pen">✎ <span>Qalam</span></button>
+          <button class="tool" data-tool="eraser">⌫ <span>O‘chirg‘ich</span></button>
+          <button class="tool" data-tool="fill">▧ <span>Bo‘yash</span></button>
+          <button class="tool" data-tool="picker">◉ <span>Rang tanlash</span></button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">02 / RANGLAR PALETRASI</div>
+        <div id="palette" class="palette"></div>
+
+        <label class="custom-label" for="customColor">O‘Z RANGINGIZNI TANLANG</label>
+        <input type="color" id="customColor" value="#ffd21f">
+
+        <div class="selected-color">
+          <span>Tanlangan rang</span>
+          <div id="colorPreview"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">03 / KANVAS SOZLAMALARI</div>
+
+        <label class="setting-label" for="gridSize">
+          Kataklar o‘lchami
+          <strong id="gridSizeValue">16 × 16</strong>
+        </label>
+        <select id="gridSize">
+          <option value="8">8 × 8</option>
+          <option value="12">12 × 12</option>
+          <option value="16" selected>16 × 16</option>
+          <option value="20">20 × 20</option>
+          <option value="24">24 × 24</option>
+          <option value="32">32 × 32</option>
+        </select>
+
+        <label class="toggle-row">
+          <span>Katak chiziqlari</span>
+          <input type="checkbox" id="gridToggle" checked>
+        </label>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">04 / AMALLAR</div>
+        <div class="action-buttons">
+          <button id="undoBtn" class="action-btn">↶ Bekor qilish</button>
+          <button id="redoBtn" class="action-btn">↷ Qaytarish</button>
+          <button id="clearBtn" class="action-btn danger">✕ Tozalash</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="editor">
+      <div class="editor-header">
+        <div>
+          <div class="panel-title">IJODIY MAYDON</div>
+          <p id="canvasInfo">16 × 16 PIXEL</p>
+        </div>
+        <div class="canvas-actions">
+          <button id="downloadBtn" class="gold-btn">↓ PNG SAQLASH</button>
+        </div>
+      </div>
+
+      <div class="canvas-area">
+        <canvas id="pixelCanvas" width="512" height="512"></canvas>
+      </div>
+
+      <div class="editor-footer">
+        <span id="pixelCount">Bo‘yalgan kataklar: 0</span>
+        <span>PIXEL ART STUDIO</span>
+      </div>
+
+      <div class="panel samples-panel">
+        <div class="panel-title">TAYYOR NAMUNALAR</div>
+        <div class="samples">
+          <button class="sample" data-sample="heart">❤️ <span>Yurak</span></button>
+          <button class="sample" data-sample="smile">😊 <span>Tabassum</span></button>
+          <button class="sample" data-sample="star">⭐ <span>Yulduz</span></button>
+          <button class="sample" data-sample="house">🏠 <span>Uy</span></button>
+          <button class="sample" data-sample="flower">🌸 <span>Gul</span></button>
+          <button class="sample" data-sample="diamond">💎 <span>Olmos</span></button>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+  <section class="tips">
+    <div class="tip-icon">✦</div>
+    <div>
+      <strong>IJODIY MASLAHAT</strong>
+      <p>Avval oddiy shakllardan boshlang. Ranglarni uyg‘unlashtiring va o‘z uslubingizni yarating!</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-line"></div>
+  <h3>PIXEL<span>ART</span> STUDIO</h3>
+  <p>Loyiha muallifi: <strong>AKRAMJONOVA JADRA MARATOVNA</strong></p>
+  <small>Har bir pikselda bir olam ijod bor.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
